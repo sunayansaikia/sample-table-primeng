@@ -23,6 +23,7 @@ import { ProductService } from './test-reports/product.service';
 import { CustomerService } from './test-reports/customer.service';
 import { ConfirmationService, MessageService } from 'primeng/api';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -48,7 +49,8 @@ import { HttpClientModule } from '@angular/common/http';
 		DropdownModule,
 		ProgressBarModule,
 		ToastModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [ProductService, CustomerService, MessageService, ConfirmationService],
   bootstrap: [AppComponent]
