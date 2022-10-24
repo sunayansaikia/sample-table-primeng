@@ -1,3 +1,4 @@
+.test-report-badge,
 .customer-badge,
 .product-badge,
 .order-badge {
@@ -7,6 +8,18 @@
     font-weight: 700;
     font-size: 12px;
     letter-spacing: .3px;
+}
+
+.test-report-badge {
+    &.status-completed {
+        background: #C8E6C9;
+        color: #256029;
+    }
+    
+    &.status-running {
+        background: #FFD8B2;
+        color: #805B36;
+    }
 }
 
 .product-badge {

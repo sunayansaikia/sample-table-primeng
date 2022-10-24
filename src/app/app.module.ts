@@ -19,18 +19,20 @@ import { ProgressBarModule } from 'primeng/progressbar';
 import { ToastModule } from 'primeng/toast';
 import { SliderModule } from 'primeng/slider';
 import { RatingModule } from 'primeng/rating';
-import { ProductService } from './test-reports/product.service';
-import { CustomerService } from './test-reports/customer.service';
 import { ConfirmationService, MessageService } from 'primeng/api';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TestReportService } from './test-reports/testreport.service';
+import { FormatTime } from './test-reports/format-time.pipes';
+import {CalendarModule} from 'primeng/calendar';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestReportsComponent
+    TestReportsComponent,
+    FormatTime
   ],
   imports: [
     BrowserModule,
@@ -50,9 +52,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 		ProgressBarModule,
 		ToastModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CalendarModule
   ],
-  providers: [ProductService, CustomerService, MessageService, ConfirmationService],
+  providers: [TestReportService, MessageService, ConfirmationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
