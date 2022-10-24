@@ -8,7 +8,7 @@ export class TestReportService {
     constructor(private http: HttpClient) { }
 
     getReports() {
-        return this.http.get<any>('assets/demo/data/test-reports-small.json')
+        return this.http.get<any>('assets/app/data/test-reports-small.json')
             .toPromise()
             .then(res => res.data as TestReport[])
             .then(data => data);
